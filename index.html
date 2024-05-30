@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icons.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>79king.dog</title>
+    <link rel="icon" href="./images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- Swiper slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+</head>
+<body>
+    <!--======== header ========-->
+    <section>
+        <!-- header scroll dropdown -->
+        <header id="navbar" class="header w-full fixed top-0 left-0 z-50 duration-500">
+            <div class="bg-[#292e3b] px-3.5 z-40 shadow shadow-gray-600">
+                <div class="max-w-[1080px] m-auto flex  justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-1" onclick="OpenNav()">
+                        <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[184px] cursor-pointer">
+                        <a href="index.html"><img src="./images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <ul class="flex flex-col md:flex-row md:gap-5 md:p-5 font-semibold text-[13px] tracing-wider lg:text-[15px] text-gray-700 md:text-[#8bfc40] divide-y divide-slate-200 *:md:border-none *:p-4 *:md:p-0 *:duration-300 *:cursor-pointer">
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TRANG CHỦ</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TIN TỨC</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">HƯỚNG DẪN</li>
+                            <!-- social icon -->
+                            </ul>
+                            <!-- marquee -->
+                            <div class="md:hidden border-b shadow">
+                                <div class="max-w-[300px] flex items-center m-auto p-1 text-gray-800 text-sm p-4">
+                                    <span class="w-20 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                                    <marquee behavior="scroll" direction="left">
+                                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                                    </marquee>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+
+                    <!-- login-signup responsive -->
+                    <div class="text-white hidden md:block text-[13px]">
+                        <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-lg hover:bg-red-800 duration-300 shadow">ĐĂNG KÝ</button>
+                        <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 ml-4 rounded-lg hover:bg-cyan-950 duration-300">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block bg-[#d33] ,shadow">
+                <div class="max-w-[1170px] m-auto flex items-center m-auto py-1 px-5 text-gray-100 text-sm">
+                    <span class="w-28 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                    <marquee behavior="scroll" direction="left">
+                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                    </marquee>
+                </div>
+            </div>
+            <div class="text-white flex gap-5 py-2.5 justify-center font-semibold items-center md:hidden bg-gray-800 text-[13px]">
+                <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-full shadow">ĐĂNG KÝ</button>
+                <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 rounded-lg border">ĐĂNG NHẬP</button>
+            </div>
+        </header>
+        <!-- header screen -->
+        <header class="w-full z-50">
+            <div class="bg-[#292e3b] px-3.5 z-40 shadow shadow-gray-600">
+                <div class="max-w-[1080px] m-auto flex  justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-1" onclick="OpenNav()">
+                        <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[184px] cursor-pointer">
+                        <a href="index.html"><img src="./images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <ul class="flex flex-col md:flex-row md:gap-5 md:p-5 font-semibold text-[13px] tracing-wider lg:text-[15px] text-gray-700 md:text-[#8bfc40] divide-y divide-slate-200 *:md:border-none *:p-4 *:md:p-0 *:duration-300 *:cursor-pointer">
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TRANG CHỦ</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TIN TỨC</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">HƯỚNG DẪN</li>
+                            <!-- social icon -->
+                            </ul>
+                            <!-- marquee -->
+                            <div class="md:hidden border-b shadow">
+                                <div class="max-w-[300px] flex items-center m-auto p-1 text-gray-800 text-sm p-4">
+                                    <span class="w-20 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                                    <marquee behavior="scroll" direction="left">
+                                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                                    </marquee>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+
+                    <!-- login-signup responsive -->
+                    <div class="text-white hidden md:block text-[13px]">
+                        <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-lg hover:bg-red-800 duration-300 shadow">ĐĂNG KÝ</button>
+                        <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 ml-4 rounded-lg hover:bg-cyan-950 duration-300">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block bg-[#d33] ,shadow">
+                <div class="max-w-[1170px] m-auto flex items-center m-auto py-1 px-5 text-gray-100 text-sm">
+                    <span class="w-28 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                    <marquee behavior="scroll" direction="left">
+                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                    </marquee>
+                </div>
+            </div>
+            <div class="text-white flex gap-5 py-2.5 justify-center font-semibold items-center md:hidden bg-gray-800 text-[13px]">
+                <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-full shadow">ĐĂNG KÝ</button>
+                <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 rounded-lg border">ĐĂNG NHẬP</button>
+            </div>
+        </header>
+    </section>
+
+    <!-- main -->
+    <section class="">
+        <!-- slider -->
+        <div class="splide" aria-labelledby="carousel-heading">            
+            <div class="splide__track text-white">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="./images/slider1.jpg" class="w-full">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./images/slider2.jpg" class="w-full">
+                    </li>
+                </ul>
+            </div>
+        </div> 
+
+        <!-- main-items -->
+        <div class="main-items max-w-[1170px] m-auto p-5 shadow text-[16px] text-[#111] leading-7 sm:text-[19px] text-pretty">
+            <div class="mt-5">
+                <!-- 78king -->
+                <div>
+                    <span class="king-text text-2xl sm:text-3xl block text-center font-[500]">79KING – TRANG CƯỢC ONLINE SỐ 1 VIỆT NAM</span>
+                    <p class="mt-5"><b>79king</b> là nhà cái được nhiều game thủ biết đến, không chỉ bởi độ uy tín, minh bạch cao mà còn có những trò chơi cá cược đa dạng, lôi cuốn. Vậy 79 king là nhà cái như thế nào? Lựa chọn này có thực hiện hoàn hảo như nhiều người vẫn đánh giá? Để pháp phá, hãy cùng đi tìm hiểu trong bài viết này.</p>
+                </div>
+
+                <!-- link dangki -->
+                 <div class="grid sm:grid-cols-2 gap-5 sm:gap-10 mt-10 text-[16px] text-gray-100 *:w-full *:bg-red-500 *:p-2 *:rounded-xl *:text-center *:cursor-pointer">
+                    <div onclick="url()">LINK ĐĂNG KÍ</div>
+                    <div onclick="url()">LINK DỰ PHÒNG</div>
+                 </div>
+                 <!-- cho troi -->
+                 <div class="mt-10 grid sm:grid-cols-2 md:grid-cols-4 gap-5 text-[15px] *:px-2 *:py-4 *:rounded-3xl *:bg-white *:shadow *:overflow-hidden font-light">
+                    <div>
+                        <div><img src="./images/poster1.webp" class="hover:scale-110 duration-500"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl sm:text-2xl md:text-3xl">Bắn Cá</span>
+                            <p class="text-center line-clamp-2">Trải nghiệm hỗn chiến thế giới đại dương với các siêu cá tại 79KING</p>
+                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div><img src="./images/poster2.webp" class="hover:scale-110 duration-500"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl sm:text-2xl md:text-3xl">Thể Thao</span>
+                            <p class="text-center line-clamp-2">Cùng tham gia sự kiện thể thao lớn nhất trên toàn thế giới tại 79KING</p>
+                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div><img src="./images/poster3.webp" class="hover:scale-110 duration-500"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl sm:text-2xl md:text-3xl">Casino</span>
+                            <p class="text-center line-clamp-2">Casino online 79KING uy tín, đẳng cấp quốc tế đang chờ đợi bạn</p>
+                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div><img src="./images/poster4.webp" class="hover:scale-110 duration-500"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl sm:text-2xl md:text-3xl">Lô Đề Online</span>
+                            <p class="text-center line-clamp-2">Nơi giải trí tuyệt vời nhất để bạn thử vận may qua những con số</p>
+                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                        </div>
+                    </div>
+
+                 </div>
+
+                 <!-- blog content -->
+                <div class="mt-12 bg-white p-2 rounded shadow">
+                    <div class="scrollbar p-4 w-full h-[660px] flex flex-col gap-3 text-[16px] scrolling-auto overflow-auto scroll-smooth">
+                        <span class="text-[#d33] text-3xl font-semibold">Giới thiệu tổng quan nhà cái 79king</span>
+                        <p>Nhà cái <span onclick="url()" class="text-blue-600 cursor-pointer">79king</span> có trụ sở tại philippines và là nhà cái top đầu trong các lĩnh vực liên quan cá cược. Nhà cái cung cấp các trò chơi cá cược và cho các thành viên vay lãi nếu có nhu cầu.</p>
+                        <span class="text-[#d33] text-xl font-semibold">Lịch sử ra đời</span>
+                        <p><span class="text-black font-semibold">79king</span> được thành lập năm 2016, trải qua 7 năm hình thành và phát triển nhà cái được đánh giá có độ uy tín cao. Năm 2020, 79 king còn được đánh giá trong top 5 nhà cái cung cấp dịch vụ cho khách hàng tuyệt vời nhất. Cùng với đó là sự tin yêu của hơn 30.000 khách hàng vẫn đang tiếp tục trải nghiệm dịch vụ tại đây.</p>
+                        
+                        <span class="text-[#d33] text-xl font-semibold">Giấy phép hoạt động 79king</span>
+                        <p>Nhà cái 79 king được các cơ quan cá cược thể giới công nhận và cấp giấy phép hoạt động như:</p>
+                        <div class="list-disc leading-8">
+                            <li>Đơn vị PAGCOR: Đây là đơn vị hàng đầu tại Philippines cung cấp các trò chơi cá cược, giải trí online, sòng bài online…</li>
+                            <li>Tổ Chức First Cagayan cung cấp giấy phép hoạt động kinh doanh hợp pháp cho rất nhiều đơn vị giải trí.</li>
+                            <li>Công ty GEOTRUST được xem là công ty dịch vụ SSL hàng đầu thế giới có chứng nhận bảo mật với giao thức cấp độ cao SHA-25 và ổ khóa có kích thước 2048 bit.</li>
+                            <li>Hệ thống DMCA chuyên quản lý quyền bản quyền, tác giả, sở hữu trí tuệ trên internet. Nhằm bảo vệ quyền sáng tạo của các đơn vị trên internet.</li>
+                        </div>
+                        <p>Như vậy có thể thấy nhà cái <span class="text-black font-semibold">79king</span> được các đơn vị có thẩm quyền cung cấp giấy phép đã đảm bảo được tính bảo mật, an toàn, uy tín cao khi hoạt động cá cược online. Hơn hết mọi giao dịch, hoạt động của sân chơi này sẽ được giám sát chặt chẽ và xử lý theo pháp luật của chính phủ nếu có nghi ngờ lừa đảo.</p>
+                        <i class="border-l-2 border-blue-600 px-6 py-1 text-xl">Xem thêm đối tác 79KING: Nhà Cái <span onclick="url()" class="text-blue-500 inline-block cursor-pointer">F8BET</span></i>
+                        
+                        <span class="text-[#d33] text-xl font-semibold">Chính sách bảo mật</span>
+                        <p><span class="text-black font-semibold">79king</span> có hệ thống bảo mật mã hóa dữ liệu SSL chỉ có thể giải mã ở máy chủ, đem lại độ an toàn cao. Bên cạnh đó, nhà cái thực hiện việc kiểm tra đăng nhập nghiêm ngặt như: Xác thực 2 yếu tố, giới hạn lượt đăng nhập sai… nhằm ngăn chặn các đối tượng hack tài khoản của người chơi. Nhà cái cũng đảm bảo không chia sẻ thông tin riêng tư của người chơi trên mọi hình thức. Bên cạnh đó <span class="text-black font-semibold">79king</span> cũng cảnh báo và khuyến nghị các thành viên không cung cấp thông tin tài khoản cho bất kỳ ai. Để hỗ trợ tối ưu cho sự bảo mật an toàn tuyệt đối nhà cái  còn theo dõi lưu trữ các hoạt động của người chơi khi tham gia. Điều này giúp cho hệ thống phát hiện ra những bất thường và ngăn chặn kịp thời.</p>
+                        
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img1.jpg">
+                                <i class="block text-center p-1">Tìm hiểu thông tin nhà cái 79King</i>
+                            </div>
+                        </div>
+
+                        <!-- 4 điều khoản điều kiện cơ bản tại nhà cái -->
+                        <span class="text-[#d33] text-xl font-semibold">4 điều khoản điều kiện cơ bản tại nhà cái</span>
+                        <p>Khi tham gia nhà cái 79 king các thành viên cần đáp ứng những điều khoản điều kiện như sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Người chơi tham gia phải đủ 18 tuổi trở lên.</li>
+                            <li>Phải cung cấp thông tin cá nhân chính xác, chính chủ và đầy đủ.</li>
+                            <li>Phải tuân thủ theo luật lệ của nhà cái khi cá cược.</li>
+                            <li>Không được dùng web để thực hiện bất kỳ hoạt động phi pháp nào.</li>
+                        </div>
+
+                        <!-- Nhà cái 79King tài trợ 3 đội bóng lớn -->
+                        <span class="text-[#d33] text-xl font-semibold">Nhà cái 79King tài trợ 3 đội bóng lớn</span>
+                        <p>Nhà cái 79 King đã hợp tác với nhiều đơn vị bóng đá lớn có tên tuổi trong cộng đồng cá cược như:</p>
+                        <div class="list-disc leading-8">
+                            <li>Hợp tác các giải bóng đá lớn tại Italia. Nhà cái hỗ trợ trực tiếp giải bóng đá vô định tại Ý với rất nhiều chiết khấu và khuyến mại khủng.</li>
+                            <li>Liên kết làm đối tác CLB Bayern Munich đem đến sự yêu thích của các fan của cả hai bên.</li>
+                            <li>Đối tác liên kết CLB Leicester City dành cho các fan hâm mộ các sân bóng này</li>
+                        </div>
+                        <p>Ngoài ra, <span class="text-black font-semibold">79king</span> đã ký liên doanh với trường gà Thomo nên việc đặt cược sẽ có chi phí đảm bảo hơn so với nhà cái khác. Cùng với đó, nhà cái đã trở thành đối tác của xổ số điện toán Việt Nam. Do vậy việc đặt cược luôn minh bạch, công khai, rõ ràng và chính xác.</p>
+
+                        <!-- Cách liên hệ nhà cái 79King -->
+                        <span class="text-[#d33] text-xl font-semibold">Cách liên hệ nhà cái 79King</span>
+                        <p>Người chơi có thể liên hệ với bộ phận CSKH mọi lúc mọi nơi qua hotline, Email, telegram, zalo…. khi gặp khó khăn cần hỗ trợ 79 King. Đội ngũ nhân viên làm việc chuyên nghiệp, tư vấn tận tình và quan trọng hơn hết là hoạt động 24/7. Điều này giúp khó khăn của mỗi người được giải quyết trong thời gian sớm nhất.</p>
+
+                        <!-- Tại sao nên tham gia 79King -->
+                        <span class="text-[#d33] text-xl font-semibold">Tại sao nên tham gia 79King</span>
+                        <p>Có rất nhiều lý do các thành viên nên tham gia 79 king, chính bởi nhà cái đem lại cho các thành viên nhiều trải nghiệm hấp dẫn. Cụ thể:</p>
+                        <div class="list-disc leading-8">
+                            <li>Nhà cái có sự uy tín, an toàn cao. Tính công khai rõ ràng, thanh toán nhanh chóng, minh bạch</li>
+                            <li>Nhà cái sở hữu những tựa game bom tấn độc quyền, với kho game 1000 nội dung đồ sộ</li>
+                            <li>Khuyến mãi khủng, ưu đãi lớn được <span class="text-black font-semibold">79king</span> đưa ra giúp người chơi sinh lời và hưởng nhiều độc quyền cao.</li>
+                            <li>Giao diện đẹp, thân thiện gây ấn tượng đến người tham gia. Đặc biệt tạo thêm cảm hứng hưng phấn, hồi hộp khi tham gia các trò chơi</li>
+                            <li>Độ bảo mật mã hóa SSL cao lọt top trên thế giới đảm bảo an toàn thông tin tuyệt đối của các thành viên</li>
+                            <li>Hình thức thanh toán, nạp, rút tiền nhanh chóng và minh bạch. Mọi giao dịch được công khai và hóa đơn đầy đủ, rõ ràng.</li>
+                            <li>Dịch vụ hỗ trợ chăm sóc các thành viên tại <span class="text-black font-semibold">79king</span> rất chuyên nghiệp. Bộ phận hỗ trợ 247 mọi lúc, mọi nơi một cách nhiệt tình.</li>
+                        </div>
+
+                        <!-- 79King có những trò chơi gì? -->
+                        <span class="text-[#d33] text-xl font-semibold">79King có những trò chơi gì?</span>
+                        <p>Nhà cái thu hút nhiều người chơi bởi kho game khủng, phong phú và đa dạng. Đáp ứng nhu cầu giải trí của người chơi. Hãy cùng khám phá những trò chơi tại kho game 79 king như:</p>
+                        <div class="list-disc leading-8">
+                            <li><p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Game bài 79king</p> với các bàn kèo cuốn hút đem đến sự khám phá vô tận của người chơi. Đem đến cảm giác chân thực khi tham gia các sòng bài.</li>
+                            <li><p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Xổ số 79 King</p> đem đến cơ hội trúng lớn cho người tham gia, tạo ra nhiều sự may mắn và hấp dẫn trong quá trình khám phá số học.</li>
+                            <li><p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Thể thao 79king</p> đem đến cho người chơi những phút giây hồi hộp, căng thẳng hòa với niềm vui chiến thắng. Giúp người chơi được tham gia các trận đấu lớn và có trải nghiệm chân thực. Nâng cao được khả năng phán đoán và chiến thuật của người chơi.</li>
+                            <li><p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Đá gà 79king</p> là sân chơi dành cho những người đam mê chơi gà. Các cuộc đá gà được phát trực tuyến để người chơi cá cược và cảm nhận được những giây phút sống động, mới lạ.</li>
+                            <li><p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Bắn cá 79king</p> là trò chơi có đồ họa đỉnh cao với đầy màu sắc, giúp người chơi chinh phục đại dương nhiều thách thức. Đem đến cảm giác phiêu lưu, hấp dẫn và choáng ngợp</li>
+                            <li>Cá cược <p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Esports</p> <span class="text-black font-semibold">79king</span> với vô số trò chơi điện tử thú vị như Liên Minh, DOTA2, FIFA, PUBG… với đủ các loại hình đặt cược. Lựa chọn hấp dẫn thu hút nhiều tay chơi trẻ tham gia.</li>
+                            <li><p onclick="url()" class="text-blue-600 cursor-pointer inline-block font-semibold">Casino 79king</p> được dành cho những người thích thử thách sự may mắn đỏ đen của bản thân. Với phong cách sang trọng, đặc sắc và đẳng cấp.</li>
+                        </div>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img2.jpg">
+                                <i class="block text-center p-1">79King có các trò chơi đa dạng</i>
+                            </div>
+                        </div>
+
+                        <!-- Link vào 79King chính thức -->
+                        <span class="text-[#d33] text-xl font-semibold">Link vào 79King chính thức</span>
+                        <p>Với sự uy tín của <span class="text-black font-semibold">79king</span> thì không ít có nhiều các website giả mạo được thành lập. Do vậy người chơi nên truy cập đúng link của 79 king để tham gia làm thành viên và chơi các trò chơi mà không bị lừa đảo, gặp rủi ro. Hiện nay 79 king hỗ trợ người tham gia trên nền tảng máy tính và điện thoại. Các game thủ có thể truy cập để đăng ký, đăng nhập <span class="text-black font-semibold">79king</span> theo link được cung cấp để đảm bảo tính an toàn. Nếu chưa biết cách xác định đường dẫn truy cập, mọi người cũng có thể liên hệ hỗ trợ để được nhà cái cung cấp link chính xác. Lưu ý: Bạn hãy lựa chọn các link truy cập trên sao cho phù hợp và tương thích với thiết bị của mình. Nếu bạn chọn vào link không tương thích với thiết bị sẽ bị báo lỗi. Trường hợp gặp phải tình huống này, mọi người hãy kiểm tra lại đường dẫn đã đúng chuẩn hay chưa trước khi bắt đầu lại.</p>
+                        <i class="border-l-2 border-blue-600 px-6 py-1 text-xl">Xem thêm: <span onclick="url()" class="text-blue-500 inline-block cursor-pointer">Link Vào 79king</span> Chính Thức – Link đăng ký, đăng nhập online</i>
+
+                        <!-- Hướng dẫn sử dụng 79King chi tiết nhất -->
+                        <span class="text-[#d33] text-xl font-semibold">Hướng dẫn sử dụng 79King chi tiết nhất</span>
+                        <p>Sau khi truy cập vào đường link chắc hẳn nhiều game thủ mới còn loay hoay khi không biết làm gì để sử dụng. Hãy theo dõi cách sử dụng dưới đây:</p>
+
+                        <span class="text-[#d33] text-lg font-semibold">Hướng dẫn cách tải app 79King về iOS và Android</span>
+                        <p>Ngoài việc truy cập vào website của nhà cái thì người chơi có thể trải nghiệm trên nền tảng điện thoại qua app 79King. Để tải app trên nền tảng điện thoại các game thủ có thể theo dõi hướng dẫn cài đặt chi tiết dưới đây:</p>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img3.jpg">
+                                <i class="block text-center p-1">Cách tải app 79 king trên điện thoại</i>
+                            </div>
+                        </div>
+                        
+                        <span class="text-[#d33] text-lg font-semibold">Hướng dẫn cài đặt app 79 king trên Iphone với 4 bước</span>
+                        <p>Để tải app <span class="text-black font-semibold">79king</span> về các thiết bị sử dụng hệ điều hành iOS, hãy làm theo 4 bước đơn giản sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Bước 1: Vào link appstore <span class="text-black font-semibold">79king</span> trên điện thoại</li>
+                            <li>Bước 2: Tìm kiếm ứng dụng của nhà cái</li>
+                            <li>Bước 3: Nhấn “cài đặt” ứng dụng và mở ứng dụng sau khi cài đặt xong</li>
+                            <li>Bước 4: Vào trang chủ của ứng dụng nhà cái.</li>
+                        </div>
+                        
+                        <span class="text-[#d33] text-lg font-semibold">4 bước quy trình cài đặt app 79King trên máy Android</span>
+                        <p>Nếu bạn đang sử dụng thiết bị hệ điều hành Android, hãy cài đặt app về máy theo 4 bước sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Bước 1: Vào kho ứng dụng CHPlay trên điện thoại</li>
+                            <li>Bước 2: Tìm kiếm ứng dụng và cài đặt</li>
+                            <li>Bước 3: Mở ứng dụng và kích hoạt</li>
+                            <li>Bước 4: Vào trang chủ nhà cái sau khi đã cài đặt app thành công.</li>
+                        </div>
+                        <i class="border-l-2 border-blue-600 px-6 py-1 text-xl">Xem thêm: Hướng Dẫn <span onclick="url()" class="text-blue-500 inline-block cursor-pointer">Tải App 79king</span> Chi Tiết Nhất 2024 Tại Nhà Cái</i>
+
+                        <span class="text-[#d33] text-lg font-semibold">5 bước hướng dẫn cách đăng ký 79King</span>
+                        <p>Để truy cập vào nhà cái và tận hưởng những trò chơi hấp dẫn thì người chơi cần thực hiện đăng ký tài khoản game theo các bước sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Bước 1: Vào link chính thức của nhà cái 79 king.</li>
+                            <li>Bước 2: Click “Đăng ký”.</li>
+                            <li>Bước 3: Cập nhật thông tin cá nhân chi tiết và chính xác như họ tên, số điện thoại, Email…</li>
+                            <li>Bước 4: Xác nhận thông tin đã đăng ký và nhấn nút “Đăng ký”.</li>
+                            <li>Bước 5: Nhận thông báo đăng ký <span class="text-black font-semibold">79king</span> thành công.</li>
+                        </div>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img4.jpg">
+                                <i class="block text-center p-1">Hướng dẫn cách đăng ký 79King</i>
+                            </div>
+                        </div>
+                        <i class="border-l-2 border-blue-600 px-6 py-1 text-xl">Xem thêm: Hướng Dẫn Cách Đăng Ký 79king Mới Nhất và Đơn Giản 2024</i>
+
+                        <span class="text-[#d33] text-lg font-semibold">Hướng dẫn cách đăng nhập 79King với 3 bước</span>
+                        <p>Sau khi đăng ký tài khoản 79King casino thành công thì người chơi cần tiến hành đăng nhập để vào kho game của nhà cái theo các bước sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Bước 1: Vào trình duyệt website hoặc app của 79 king.</li>
+                            <li>Bước 2: Nhập thông tin đăng nhập và mật khẩu đã đăng ký trước đó</li>
+                            <li>Bước 3: Nhấn “Đăng nhập” để vào giao diện chính của nhà cái.</li>
+                        </div>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img5.jpg">
+                                <i class="block text-center p-1">Chia sẻ cách đăng nhập 79King</i>
+                            </div>
+                        </div>
+
+                        <span class="text-[#d33] text-lg font-semibold">Hướng dẫn 4 bước nạp tiền vào 79King</span>
+                        <p>Để trải nghiệm các trò chơi không giới hạn thì các thành viên cần tiến hành <span onclick="url()" class="text-blue-500 inline-block cursor-pointer">nạp tiền</span> vào tài khoản sau khi đăng nhập bằng cách:</p>
+                        <div class="list-disc leading-8">
+                            <li>Bước 1: Chọn “Gửi tiền trực tuyến” trên menu thành viên.</li>
+                            <li>Bước 2: Chọn số tiền gửi và số điện thoại của bạn (lưu ý số điện thoại cần chính xác để nhân viên CSKH sẽ liên hệ với bạn khi thanh toán gặp vấn đề).</li>
+                            <li>Bước 3: Lựa chọn ngân hàng thanh toán được liên kết với tài khoản game <span class="text-black font-semibold">79king</span> và nhấn “Gửi”.</li>
+                            <li>Bước 4: Sau khi thực hiện xong hệ thống sẽ tiếp nhận và thông báo nạp tiền thành công cho bạn. Đồng thời tài khoản của bạn cũng sẽ được cộng số dư.</li>
+                        </div>
+                        <p>Lưu ý khi nạp tiền tại 79 king: Bạn cần nạp ít nhất là 10.000 VND và giới hạn cao nhất là 30 tỷ VND</p>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img6.jpg">
+                                <i class="block text-center p-1">Cách nạp tiền 79King để tham gia chơi game</i>
+                            </div>
+                        </div>
+
+                        <span class="text-[#d33] text-lg font-semibold">3 bước thực hiện rút tiền tại 79King</span>
+                        <p>Khi tham gia các trò chơi tại <span class="text-black font-semibold">79king</span> người chơi cũng có thể kiếm lời và rút tiền về tài khoản. Việc rút tiền tại nhà cái được quy ước 1 điểm – 1000 VND. Tuy nhiên có nhiều thành viên chưa biết cách thực hiện rút cho đúng. Nếu bạn có nhiều điểm hãy thực hiện rút tiền theo cách sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Bước 1: Vào website và chọn “Rút tiền Trực tuyến”.</li>
+                            <li>Bước 2: Nhập số điểm = số tiền cần rút</li>
+                            <li>Bước 3: Chọn tài khoản ngân hàng liên kết và nhấn rút tiền</li>
+                        </div>
+                        <p>Lưu ý khi rút tiền <span class="text-black font-semibold">79king</span></p>
+                        <div class="list-disc leading-8">
+                            <li>Rút tối thiểu là 100.000 VND và tối đa số tiền rút là 5 tỷ VND</li>
+                            <li>Đảm bảo thông tin ngân hàng chính xác, trùng khớp với hệ thống</li>
+                            <li>Không rút tiền khi hệ thống đang bảo trì.</li>
+                        </div>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img7.jpg">
+                                <i class="block text-center p-1">Cách rút tiền tại nhà cái 79King</i>
+                            </div>
+                        </div>
+
+                        <!-- 7 chương trình khuyến mãi 79King mới nhất -->
+                        <span class="text-[#d33] text-xl font-semibold">7 chương trình khuyến mãi 79King mới nhất</span>
+                        <p>Nhà cái có rất nhiều khuyến mãi ở các thời điểm khác nhau. Đặc biệt là những dịp ngày lễ, tết hay kỷ niệm của nhà cái. Do vậy các thành viên hãy để ý và cập nhật khuyến mại thường xuyên để không bị bỏ lỡ những cơ hội vàng. Hiện nay tại <span class="text-black font-semibold">79king</span> đang có những khuyến mại mới nhất được thông báo như sau:</p>
+                        <div class="list-disc leading-8">
+                            <li>Trong ngày 15 hàng tháng có phần thưởng bí ẩn do hệ thống tự động chọn ngẫu nhiên.</li>
+                            <li>Ngày 29 mỗi tháng có phần thưởng ngày hội viên được hệ thống tự động lựa chọn.</li>
+                            <li>Mỗi ngày được hoàn trả không kể thắng hay thua từ 0,7% – 1,5%.</li>
+                            <li>Quà tặng độc quyền cho hội viên nạp lần đầu 179K tặng 179K.</li>
+                            <li>Mỗi ngày trước 15h hệ thống sẽ tự động phát thưởng theo mã ưu đãi: KING008, (KING002, KING003 , KING004, KING005.</li>
+                            <li>Đối với các mã KING001, KING006, KING007 hội viên hãy liên hệ CSKH để nhận thưởng.</li>
+                            <li>Đối với các mã KING888, KING999, KING009 hệ thống sẽ phát thưởng ngẫu nhiên.</li>
+                        </div>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img8.jpg">
+                                <i class="block text-center p-1">79King có vô vàn khuyến mãi VIP</i>
+                            </div>
+                        </div>
+                        <i class="border-l-2 border-blue-600 px-6 py-1 text-xl">Xem thêm: Điểm Danh Những  <span onclick="url()" class="text-blue-500 inline-block cursor-pointer"> Khuyến Mãi 79king</span> Khủng Mới Nhất</i>
+
+                        <!-- 3 điểm đánh giá 79King có uy tín không? -->
+                        <span class="text-[#d33] text-xl font-semibold">3 điểm đánh giá 79King có uy tín không?</span>
+                        <p>Như đã biết nhà cái <span class="text-black font-semibold">79king</span> có sự uy tín cao, thu hút được lượng lớn người truy cập. Tuy nhiên không ít người tham gia thắc mắc nhà cái có lừa đảo không? Dưới đây là một số đánh giá của các thành viên cho thấy có uy tín không?</p>
+
+                        <span class="text-[#d33] text-lg font-semibold">Đánh giá giao dịch tại nhà cái có uy tín không?</span>
+                        <p>Việc nhà cái có uy tín hay không chủ yếu nằm ở phương thức giao dịch. Đây là yếu tố quan trọng quyết định độ uy tín của <span class="text-black font-semibold">79king</span>. Tại đây tính năng chuyển tiền luôn được thực hiện nhanh chóng minh bạch. Mọi số dư, số giao dịch đều có lịch sử hiện ngày giờ, nội dung giao dịch chi tiết.  Người chơi có thể rà soát giao dịch hoặc kiểm tra lại lịch sử giao dịch dễ dàng. Nạp tiền vào hệ thống <span class="text-black font-semibold">79king</span> với tốc độ nhanh chóng, với nhiều hình thức khác nhau một cách chuyên nghiệp. Ngoài ra quá trình rút thưởng của các thành viên cũng được duyệt nhanh chóng đảm bảo giao dịch an toàn. Thủ tục giao dịch tại hệ thống rất đơn giản người chơi chỉ cần làm theo hướng dẫn và cung cấp đúng, đủ thông tin, phương thức và số tiền cần giao dịch là có thể hoàn thành. Chứ không cần cung cấp giấy tờ, xác minh cá nhân riêng tư của thành viên.</p>
+
+                        <span class="text-[#d33] text-lg font-semibold">Đánh giá về pháp lý của 79King có uy tín không?</span>
+                        <p>Mặc dù 79 king hình thành không quá lâu nhưng đã có tên tuổi trên thị trường cá cược online. Về mặt pháp lý, các thành viên hoàn toàn có thể an tâm với sự chứng nhận và cấp giấy phép của các cơ quan giải trí có thẩm quyền trên thế giới như PAGCOR, First Cagayan… Khi được những cơ quan này bảo lãnh và giám sát thì không có nhà cái nào hợp pháp và có độ uy tín cao hơn. Do vậy, về mặt pháp lý tại nhà cái <span class="text-black font-semibold">79king</span> luôn có thẩm quyền cao và được chính phủ chấp thuận.</p>
+                        <div class="flex justify-center items-center mt-3">
+                            <div class="bg-gray-200">
+                                <img src="./images/img9.jpg">
+                                <i class="block text-center p-1">Nhà cái 79King có uy tín không?</i>
+                            </div>
+                        </div>
+
+                        <span class="text-[#d33] text-lg font-semibold">Đánh giá về các game của 79King có lừa đảo hay không?</span>
+                        <p>Như đã nêu trên <span class="text-black font-semibold">79king</span> hợp tác với rất nhiều nhà phát hành game hàng đầu trong mọi lĩnh vực như thể thao, đánh gà, sổ xố… Những sản phẩm này được hầu hết các cược thủ ưa chuộng và hot trên thị trường cá cược. Điều này đem lại cho người chơi có sự trải nghiệm đa dạng, hấp dẫn và cuốn hút. Hơn hết các game tại đây có tỷ lệ thắng cao, nhiều khuyến mãi đem đến cho người chơi niềm vui chiến thắng và sinh lời. Các tính năng tại những trò chơi được nâng cấp, bảo trì một cách thường xuyên đảm bảo tính mượt mà cho người chơi. Không gây gián đoạn làm mất cảm hứng khi đang tham gia. Hơn hết một điểm đánh được đánh giá cao tại <span class="text-black font-semibold">79king</span> là văn hóa của mọi người chơi rất tế nhị và lịch sự. Không xảy ra xô xát, chửi bới hay cà khịa nhau. Thắng thua rõ ràng và chấp nhận kết quả trong hoan hỉ. Những thông tin nói nhà cái lừa đảo có thể là sai trái hoặc từ một website không chính chủ giả mạo.</p>
+
+                        <!-- Kết bài -->
+                        <span class="text-[#d33] text-xl font-semibold">Kết bài</span>
+                        <p>Với phần giới thiệu trên đây người chơi có thể thấy <span class="text-black font-semibold">79king</span> là nhà cái uy tín mang tầm thế giới, và được nhiều người lựa chọn. Qua đó bạn đọc có thể hiểu rõ hơn về nhà cái này. Hy vọng bài viết sẽ đem lại nhiều thông tin hữu ích cho bạn đọc.</p>
+                    </div>
+                </div>
+
+                <!-- BÀI VIẾT MỚI CẬP NHẬT -->
+                 <div class="mt-10">
+                    <span class="text-blue-500 text-2xl">BÀI VIẾT MỚI CẬP NHẬT</span>
+                    <div class="swiper cubeSwiper mt-5">
+                        <div class="swiper-wrapper *:relative *:rounded *:duration-500 *:overflow-hidden *:h-[380px] *:sm-h-[300px] *:cursor-pointer">
+                            <!-- 1 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">26<br>Th5</span>
+                                </div>
+                                <img src="./images/pic1.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Cá Độ Bóng Bầu Dục – Bộ Môn Cá Cược Kịch Tính, Gay Cấn</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Cá độ bóng bầu dục đang là bộ môn làm mưa làm gió trên thị</span>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">06<br>Th5</span>
+                                </div>
+                                <img src="./images/pic2.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Bắn cá xèng – Lục lại ký ức với phiên bản săn cá đời đầu</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Trò chơi bắn cá xèng trong thời gian gần đây đang ngày càng trở nên</span>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">23<br>Th4</span>
+                                </div>
+                                <img src="./images/pic3.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Bắn cá Zobanca – Lựa chọn lý tưởng để giải trí và kiếm tiền</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Bắn cá Zobanca với nhiều phiên bản săn thưởng cực dễ đang thu hút vô</span>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">23<br>Th3</span>
+                                </div>
+                                <img src="./images/pic4.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Bắn cá Kui Lee – Phiên bản săn thưởng thú vị mới nhất 2024</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Bắn cá Kui Lee với nhiều điều mới mẻ đã và đang mang đến cho</span>
+                                </div>
+                            </div>
+                            <!-- 5 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">21<br>Th4</span>
+                                </div>
+                                <img src="./images/pic5.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Bóng đá ảo – Chia sẻ 5 kinh nghiệm cực hay từ chuyên gia</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Bóng đá ảo là một hình thức đặt cược mới với nhiều cơ hội mang</span>
+                                </div>
+                            </div>
+                            <!-- 6 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">21<br>Th4</span>
+                                </div>
+                                <img src="./images/pic6.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Kèo chấp – Cách tính thắng thua trong 4 mức tỷ lệ cơ bản</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Để tham gia kèo chấp, trước tiên mọi người cần nắm rõ cách tính thắng</span>
+                                </div>
+                            </div>
+                            <!-- 7 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">11<br>Th4</span>
+                                </div>
+                                <img src="./images/pic7.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Kèo rung – Cách tính thắng thua với 4 mức tỷ lệ cơ bản</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Kiểu chơi cá độ kèo rung đang trở thành lựa chọn được nhiều tay chơi</span>
+                                </div>
+                            </div>
+                            <!-- 8 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">11<br>Th4</span>
+                                </div>
+                                <img src="./images/pic8.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Kèo penalty – Giải thích 5 kiểu chơi thường gặp nhất</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Kèo penalty với nhiều kiểu chơi đang trở thành lựa chọn hot được nhiều người</span>
+                                </div>
+                            </div>
+                            <!-- 9 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">09<br>Th4</span>
+                                </div>
+                                <img src="./images/pic9.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Đá Gà Cựa Sắt Là Gì? Trực Tiếp Trận Đá Gà Cựa Sắt Mới Nhất 2024</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Đá gà cựa sắt được xem là loại hình giải trí được ưa thích hiện</span>
+                                </div>
+                            </div>
+                            <!-- 10 -->
+                            <div onclick="url()" class="swiper-slide hover:scale-y-105 group ">
+                                <div class="absolute top-5 left-5 size-12 p-1 text-white text-sm flex justify-center items-center rounded-full bg-indigo-500">
+                                    <span class="text-center block font-semibold">09<br>Th4</span>
+                                </div>
+                                <img src="./images/pic10.jpg">
+                                <div class="px-2 py-4 leading-6 text-[17px] group-hover:bg-white group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 duration-500">
+                                    <span class="text-center block text-red-600 hover:text-blue-500">Đá Gà Đòn Là Gì? Trực Tiếp Đá Gà Đòn Mới Nhất 2024</span>
+                                    <span class="flex justify-center items-center py-3"><p class="border w-6/12"></p></span>
+                                    <span class="block text-center text-gray-700 text-[15px] group-transform group-translate-y-1.5 group-hover:-translate-y-1.5 opacity-0 group-hover:opacity-100 duration-500">Tìm Hiểu đá gà đòn là gì? Với những thông tin về dòng gà chọi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="sm:py-10 bg-gray-800 text-gray-100">
+        <div class="max-w-[1170px] m-auto p-5">
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 *:mt-8 sm:*:mt-0">
+                <!-- logo -->
+                <div class="">
+                    <a href="index.html" class="max-w-[250px]"><img src="./images/logo.png"></a>
+                    <p class="mt-5 text-[17px] text-balance"><a href="#" class="text-indigo-700 tracking-wide">79KING</a> là nhà cái giải trí chuyên nghiệp và gây ấn tượng mạnh ngay từ những buổi đầu có mặt trên thị trường. Điển hình nhất là việc 79KING cung cấp số lượng lớn game hấp dẫn, mức ăn thưởng cao. </p>
+                    <div class="flex gap-2 text-3xl mt-3 text-blue-500 *:cursor-pointer">
+                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="logo-facebook"></ion-icon></div>
+                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="logo-instagram"></ion-icon></div>
+                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="logo-twitter"></ion-icon></div>
+                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="mail"></ion-icon></div>
+                    </div>
+                    <div class="mt-3">
+                        <button onclick="url()" class="px-5 py-2 bg-[#ed1c24] hover:bg-red-700 text-lg tracking-wide flex justify-center items-center gap-2 border border-gray-100 rounded-lg"><img src="./images/web1s.png" class="w-12"><span>CONTINUE(x/x)</span></button>
+                    </div>
+                </div>
+                
+                <!-- VỀ CHÚNG TÔI -->
+                <div class="">
+                    <span class="text-lg">VỀ CHÚNG TÔI</span>
+                    <div class="mt-5 *:mt-4 *:cursor-pointer">
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Giới thiệu</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Miễn Trừ Trách Nhiệm</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Điều Khoản Sử Dụng</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">VChính Sách Bảo Mật</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Quyền Riêng Tư</span></div>    
+                    </div>
+                    <div class="mt-5"><img src="./images/protect.png"></div>
+                </div>
+    
+                <!-- TỪ KHOÁ TÌM KIẾM -->
+                <div class="">
+                    <span class="text-lg">TỪ KHOÁ TÌM KIẾM</span>
+                    <div class="mt-5 *:mt-4 *:cursor-pointer">
+                        <div onclick="url()" class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <span class="">Hướng Dẫn</span></div>      
+                        <div onclick="url()" class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <span class="">Khuyến Mãi</span></div>      
+                        <div onclick="url()" class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <span class="">Tin Tức</span></div>      
+                        <div  class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <a href="https://hay88net-sitemap.vercel.app/" class="">Sitemap</a></div>      
+                    </div>
+                </div>
+    
+                <!-- LIÊN HỆ -->
+                <div class="">
+                    <span class="text-lg">LIÊN HỆ</span>
+                    <div class="mt-5 *:mt-4">
+                        <div class="flex gap-2"><ion-icon class="text-5xl" name="location"></ion-icon> <span class="">Địa Chỉ: 101/8 Lê Văn Thọ, Phường 9, Gò Vấp, Thành phố Hồ Chí Minh, Vietnam</span></div>      
+                        <div class="flex gap-2 items-center"><ion-icon class="text-2xl" name="call"></ion-icon> <span class="">Hotline: 0979790790</span></div>      
+                        <div class="flex gap-2 items-center"><ion-icon class="text-2xl" name="mail"></ion-icon> <span class="">Email: 79kingskin@gmail.com</span></div>      
+                        <div class="flex gap-2 items-center"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <a href="https://79king.skin/" class="">Website: https://79king.skin/</a></div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 *:mt-10 w-full">
+                <div><img src="./images/footer-ban.png"></div>
+                <div class="w-full"><img src="./images/footer-ban2.png" class="w-full"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
