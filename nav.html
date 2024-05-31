@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Nav</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        
+        .head-items {
+            background-color: #023047;
+            color: white;
+            max-width: 1280px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .nav-items{
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            color: white;
+        }
+        .nav-items li a{
+            color: white;
+        }
+        .login {
+            display: flex;
+            gap: 10px;
+        }
+        .open, .close {
+            display: none;
+            font-size: 25px;
+        }
+        
+        @media (max-width: 500px) {
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0;
+                position: relative;
+                transition: 0.5s;
+                overflow-x:hidden;
+            }
+            .open, .close {
+                display: block;
+            }
+
+            .nav-items{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background-color: #251502;
+                z-index: 50;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="head-items">
+            <!-- open nav -->
+            <div onclick="openNav()" class="open" >
+                <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
+            </div>
+            
+            <div class="logo"><h2>LOGO</h2></div>
+            <nav id="Nav" class="nav-content">
+                <div class="close">
+                    <ion-icon onclick="closeNav()" name="close"></ion-icon>
+                </div>
+                <div class="nav-content">
+                    <ul class="nav-items">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>   
+                </div>
+            </nav>
+            <div class="login">
+                <button>login</button>
+                <button>signup</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById('Nav').style.width="100%"
+        }
+        function closeNav() {
+            document.getElementById("Nav").style.width="0"
+        }
+    </script>
+</body>
+</html>

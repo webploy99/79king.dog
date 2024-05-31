@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icons.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>79king.dog</title>
+    <link rel="icon" href="./images/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <!--======== header ========-->
+    <section>
+        <!-- header scroll dropdown -->
+        <header id="navbar" class="header w-full fixed top-0 left-0 z-50 duration-500">
+            <div class="bg-[#292e3b] px-3.5 z-40 shadow shadow-gray-600">
+                <div class="max-w-[1170px] m-auto flex  justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-1 cursor-pointer" onclick="OpenNav()">
+                        <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[184px] cursor-pointer">
+                        <a href="index.html"><img src="./images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <ul class="flex flex-col md:flex-row md:gap-5 md:p-5 font-semibold text-[13px] tracing-wider lg:text-[15px] text-gray-700 md:text-[#8bfc40] divide-y divide-slate-200 *:md:border-none *:p-4 *:md:p-0 *:duration-300 *:cursor-pointer">
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TRANG CHỦ</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TIN TỨC</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">HƯỚNG DẪN</li>
+                            <!-- social icon -->
+                            </ul>
+                            <!-- marquee -->
+                            <div class="md:hidden border-b shadow">
+                                <div class="max-w-[300px] flex items-center m-auto p-1 text-gray-800 text-sm p-4">
+                                    <span class="w-20 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                                    <marquee behavior="scroll" direction="left">
+                                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                                    </marquee>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+
+                    <!-- login-signup responsive -->
+                    <div class="text-white hidden md:block text-[13px]">
+                        <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-lg hover:bg-red-800 duration-300 shadow">ĐĂNG KÝ</button>
+                        <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 ml-4 rounded-lg hover:bg-cyan-950 duration-300">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block bg-[#d33] ,shadow">
+                <div class="max-w-[1170px] m-auto flex items-center m-auto py-1 px-5 text-gray-100 text-sm">
+                    <span class="w-28 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                    <marquee behavior="scroll" direction="left">
+                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                    </marquee>
+                </div>
+            </div>
+            <div class="text-white flex gap-5 py-2.5 justify-center font-semibold items-center md:hidden bg-gray-800 text-[13px]">
+                <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-full shadow">ĐĂNG KÝ</button>
+                <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 rounded-lg border">ĐĂNG NHẬP</button>
+            </div>
+        </header>
+        <!-- header screen -->
+        <header class="w-full z-50">
+            <div class="bg-[#292e3b] px-3.5 z-40 shadow shadow-gray-600">
+                <div class="max-w-[1170px] m-auto flex  justify-center md:justify-between items-center text-white relative">
+                    <!-- open nav -->
+                    <div class="menu-icon absolute left-0 md:hidden text-2xl mt-1" onclick="OpenNav()">
+                        <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
+                    </div>
+                    <!-- logo -->
+                    <div class="logo max-w-[184px] cursor-pointer">
+                        <a href="index.html"><img src="./images/logo.png"></a>
+                    </div>
+                    <!-- menu -->
+                    <nav id="Nav" class="z-40">
+                        <div class="md:hidden flex justify-end text-3xl text-white p-2 font-bold w-full h-full bg-gray-600 opacity-80">
+                            <ion-icon onclick="CloseNav()" name="close"></ion-icon>
+                        </div>
+                        <div class="h-full opacity-100 md:relative absolute top-0 flex flex-col bg-gray-50 md:bg-transparent">
+                            <!-- search -->
+                            <div class="mt-10 md:hidden p-4 border-b">
+                                <div class="flex justify-center items-center">
+                                    <input type="search" class="p-2 focus:outline-none w-56 font-normal shadow-inner border text-gray-800" placeholder="Tiềm Kiếm ..." required />
+                                    <button class="bg-red-500 text-white py-2 px-3 rounded">
+                                        <ion-icon name="search" class="text-2xl flex justify-center items-center"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- menu item -->
+                            <ul class="flex flex-col md:flex-row md:gap-5 md:p-5 font-semibold text-[13px] tracing-wider lg:text-[15px] text-gray-700 md:text-[#8bfc40] divide-y divide-slate-200 *:md:border-none *:p-4 *:md:p-0 *:duration-300 *:cursor-pointer">
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TRANG CHỦ</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">TIN TỨC</li>
+                                <li onclick="url()" class="hover:text-yellow-200 hover:-translate-y-0.5">HƯỚNG DẪN</li>
+                            <!-- social icon -->
+                            </ul>
+                            <!-- marquee -->
+                            <div class="md:hidden border-b shadow">
+                                <div class="max-w-[300px] flex items-center m-auto p-1 text-gray-800 text-sm p-4">
+                                    <span class="w-20 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                                    <marquee behavior="scroll" direction="left">
+                                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                                    </marquee>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+
+                    <!-- login-signup responsive -->
+                    <div class="text-white hidden md:block text-[13px]">
+                        <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-lg hover:bg-red-800 duration-300 shadow">ĐĂNG KÝ</button>
+                        <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 ml-4 rounded-lg hover:bg-cyan-950 duration-300">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block bg-[#d33] ,shadow">
+                <div class="max-w-[1170px] m-auto flex items-center m-auto py-1 px-5 text-gray-100 text-sm">
+                    <span class="w-28 text-2xl"><ion-icon name="volume-high-outline"></ion-icon></span>
+                    <marquee behavior="scroll" direction="left">
+                        <p class="tracking-widest">🎖️ 79KING 🎖️ TẶNG THƯỞNG NẠP LÊN TỚI 700.000 TRIỆU MỖI NGÀY 💥 THƯỞNG NẠP VIP 3% KHÔNG GIỚI HẠN 🎁 HOÀN TRẢ NGÀY LÊN ĐẾN 2,8% 🧧 THAM GIA ĐỂ NHẬN THƯỞNG NGAY HÔM NAY 🎉</p>
+                    </marquee>
+                </div>
+            </div>
+            <div class="text-white flex gap-5 py-2.5 justify-center font-semibold items-center md:hidden bg-gray-800 text-[13px]">
+                <button onclick="url()" class="bg-red-600 w-24 py-1.5 rounded-full shadow">ĐĂNG KÝ</button>
+                <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 rounded-lg border">ĐĂNG NHẬP</button>
+            </div>
+        </header>
+    </section>
+
+    <!-- main -->
+    <section class="">
+        <!-- main-items -->
+        <div class="main-items max-w-[1170px] m-auto p-5 shadow text-[16px] text-[#111] leading-7 sm:text-[16px] text-pretty">
+            <div class="flex flex-col gap-4">
+                <di><a href="index.html" class="text-blue-500">Home</a> » <a href="thethao.html" class="text-blue-500"> Thể thao</a> » Thể Thao 79king – Niềm Đam Mê Cá Cược Bóng Đá 2024</di>
+
+                <span class="text-2xl font-semibold text-red-600">Thể Thao 79king – Niềm Đam Mê Cá Cược Bóng Đá 2024</span>
+                <p>Khi tham gia <span onclick="url()" class="text-blue-600 cursor-pointer">79king</span> không ai không nhắc đến game cá cược thể thao với đa dạng các bộ môn. Những bộ môn này luôn thu hút những người chơi có chung niềm đam mê và muốn được trải nghiệm chân thực. Cùng tìm hiểu <span onclick="url()" class="text-blue-600 cursor-pointer">thể thao 79king</span> có gì?</p>
+
+                <span class="text-2xl font-semibold text-red-600">Tìm Hiểu Sơ Lược Về Thể Thao 79king</span>
+                <p>Thể thao 79king là game cá cược thu hút đông đảo người dùng. Theo đó, nhà cái 79king đã đặc biệt đầu tư nhiều công sức để xây dựng kênh game hoành tráng phục vụ người chơi. Nhà cái đã cộng tác với rất nhiều nhà cái danh tiếng trên thế giới và cung cấp dịch vụ tốt nhằm đem đến cho các hội viên những giây phút trải nghiệm thích thú nhất.</p>
+                <p>Người chơi tham gia không những được giải trí đỉnh cao mà còn có thể tăng doanh thu khi thắng kèo cá cược. Tỷ lệ cá cược tại thể thao 79king cao ở mọi bộ môn cùng nhiều chương trình ưu đãi hấp dẫn. Do vậy người chơi có thể dễ dàng thắng cược và lựa chọn bộ môn mình yêu thích.</p>
+
+                <div class="flex justify-center items-center mt-3">
+                    <div class="bg-gray-200">
+                        <img src="./images/thethao-img1.jpg">
+                        <i class="block text-center p-1">Tổng quan về thể thao 79king</i>
+                    </div>
+                </div>
+
+                <span class="text-2xl font-semibold text-red-600">Thể Thao 79king Có Những Trò Chơi Gì?</span>
+                <p>Như đã đề cập, thể thao 79king được xây dựng và phát triển với đa dạng các bộ môn hot hiện nay. Khi trải nghiệm người chơi sẽ được tham gia những trò chơi theo phong cách truyền thống và điện tử. Cụ thể như sau:</p>
+                <span class="text-xl font-semibold text-red-600">Thể thao 79king theo phong cách truyền thống</span>
+                <p>Trong danh sách các môn sport theo truyền thống có các bộ môn bao gồm: Bóng đá, bóng chuyền, bóng ném, cầu lông, quần vợt, tennis, đua xe đạp, moto, oto…. Tất cả những bộ môn này được nhà cái cập nhật thường xuyên và liên tục.</p>
+                <p>Khi người chơi tham gia các chương trình sẽ được phát trực tiếp cho hội viên theo dõi và đặt cược. Dù là trận đấu to hay bé, trong hay ngoài lãnh thổ thì người chơi vẫn có thể trực tiếp theo dõi và tham gia trải nghiệm.</p>
+                <div class="flex justify-center items-center mt-3">
+                    <div class="bg-gray-200">
+                        <img src="./images/thethao-img2.jpg">
+                        <i class="block text-center p-1">Thể thao 79king có những trò chơi gì?</i>
+                    </div>
+                </div>
+
+                <span class="text-xl font-semibold text-red-600">Thể thao 79king theo phong cách điện tử</span>
+                <p>Nói đến thể thao 79king thì không thể bỏ qua E-Sports. Đây là môn sport ngày càng được nhiều cược thủ quan tâm và tham gia. E-Sports là game thuộc phân khúc điện tử, người chơi có thể tham gia như một loại hình cá cược đang được thịnh hành hiện nay.</p>
+                <p>E-Sports có nhiều sự kiện với quy mô to, nhỏ khác nhau. Nhưng đã lôi cuốn hàng triệu bet thủ quan tâm và yêu thích. Các trận đấu luôn mang đến cho người chơi những trải nghiệm thú vị bất tận với đa dạng thể loại như: LOL, Dota 2, CS:GO, KOG… Những dòng game này hiện nay không những được giới trẻ du nhập mà còn những người trung tuổi cũng tham gia xuyên suốt từ thời niên thiếu.</p>
+                <p>Các dòng thể thao 79king điện tử được nhà cái liệt kê chi tiết các thông tin như thời gian, số lần hạ gục, số lần win, số điểm… Việc thống kê này sẽ giúp người chơi tính toán và theo dõi sát sao trong quá trình chơi game.</p>
+
+                <span class="text-2xl font-semibold text-red-600">Thể Thao 79king Có Những Ưu Điểm Gì?</span>
+                <p>Thể thao 79king có nhiều ưu điểm cuốn hút người chơi. Một số ưu điểm được kể đến như sau:</p>
+
+                <span class="text-xl font-semibold text-red-600">Thể thao 79king có nhiều chức năng uy tín</span>
+                <p>Thể thao 79king được xếp hạng top 4 nhà cái hàng đầu tại Việt Nam với nhiều tính năng uy tín như:</p>
+
+                <div class="list-disc leading-8">
+                    <li>Các trò chơi sport có tỷ lệ cược hấp dẫn dành cho người chơi.</li>
+                    <li>Game sport cá cược được trang bị hệ thống bảo mật chặt chẽ</li>
+                    <li>Các game cá cược sport đảm bảo tính minh bạch, công bằng cho các thành viên</li>
+                    <li>Mọi kết quả đều nằm trên sự may rủi của hội viên và tuyệt đối không có tình trạng lừa đảo, gian lận…</li>
+                </div>
+
+                <span class="text-xl font-semibold text-red-600">Thể thao 79king có các kèo giải đấu cược đa dạng</span>
+                <p>Nhà cái đã cây dựng hệ thống game cá cược thể thao 79king với các kèo cược hấp dẫn và uy tín mang tầm quốc tế như:</p>
+                <div class="list-disc leading-8">
+                    <li>Kèo giải đấu cược châu Á</li>
+                    <li>Cược kèo các giải đấu châu Âu</li>
+                    <li>Kèo cược chấp 1, cả trận</li>
+                    <li>Kèo cược chấp/nửa, cả trận</li>
+                    <li>Cược tỷ số bàn thắng trong giải đấu</li>
+                    <li>Cược kèo ghi bàn thắng đầu tiên/đuôi</li>
+                    <li>Cá cược các giải đấu kèo tổng hợp.</li>
+                </div>
+
+                <div class="flex justify-center items-center mt-3">
+                    <div class="bg-gray-200">
+                        <img src="./images/thethao-img3.jpg">
+                        <i class="block text-center p-1">Những ưu điểm tại thể thao 79king</i>
+                    </div>
+                </div>
+
+                <span class="text-xl font-semibold text-red-600">Game sport 79king có cấu hình cao</span>
+                <p>Nhà cái đã tối đa hóa tốc độ, cấu hình cho các game thể thao 79king. Nhằm đưa các trò chơi đều có thể hoạt động mượt mà trên mọi trình duyệt. Khiến người chơi có thể cài đặt phần mềm một cách nhanh chóng.</p>
+                <p>Sảnh thể thao 79king cũng được đầu tư với những hình ảnh sắc nét và bắt mắt hấp dẫn người chơi. Cùng với đo âm thanh vô cùng sống động đã tạo nên cho các thành viên những trải nghiệm chân thực và thích thú nhất.</p>
+
+                <span class="text-xl font-semibold text-red-600">Cập nhật đầy đủ các thông tin</span>
+                <p>79king luôn luôn cập nhật các thông tin chính thức từ các trận đấu một cách chi tiết. Nhà cái cập nhật các thông tin như: tình trạng trận đấu hai bên, tình hình trên sân, diễn biến tỷ lệ cược và những nhận định, dự kiến trận đấu… Điều Này giúp người chơi có thể tiếp cần được thông tinh nhanh chóng và chính xác. Khiến việc suy đoán tỷ số và đặt cược được dễ dàng hơn.</p>
+                <span class="text-xl font-semibold text-red-600">Thể thao 79king có những ưu đãi gì?</span>
+                <p>Để hỗ trợ người chơi cá cược các môn thể thao 79king, nhà cái đã triển khai rất nhiều chương trình ưu đãi với nhiều giá trị cao. Những ưu đãi này sẽ được tiến hành thường xuyên để người chơi có nhiều cơ hội gỡ lại bàn nếu bị thua cược.</p>
+
+                <span class="text-2xl font-semibold text-red-600">Thể Thao 79king Có Những Sảnh Cược Nào?</span>
+                <p>Nhằm đáp ứng nhu cầu cho người chơi, 79king đã thiết lập nhiều sảnh cược hoành tráng. Điều này hoàn toàn đưa người chơi vào một thế giới sport hào nhoáng và choáng ngợp như sau:</p>
+
+                <span class="text-xl font-semibold text-red-600">Sảnh thể thao SABA</span>
+                <p>Sảnh thể thao SABA có hơn 10 năm kinh nghiệm trên thị trường cá cược. Đây là sảnh sport được 79king đánh giá cao, đồng thời SABA cũng là mẫu sảnh lớn trên thế giới.</p>
+                <p>Tại đây các bet thủ có thể mua những giải đấu bóng đá lớn nhất trên thế giới như: Premier League, Serie A, La Liga, Bundesliga và các giải quốc tế như World Cup, Euro.</p>
+                <p>Ngoài ra tại sảnh SABA người chơi còn được cung cấp bởi những môn thể thao khác như cầu lông, bóng chuyền, bóng rổ, quần vợt… với tỷ lệ kèo cao. Người chơi sẽ được theo dõi các trận đấu trực tiếp để nắm rõ tình hình đặt cược thực tế.</p>
+                
+                <div class="flex justify-center items-center mt-3">
+                    <div class="bg-gray-200">
+                        <img src="./images/thethao-img4.jpg">
+                        <i class="block text-center p-1">Các sảnh cược tại thể thao 79king</i>
+                    </div>
+                </div>
+
+                <span class="text-xl font-semibold text-red-600">Sảnh UG Sport</span>
+                <p>Sảnh UG Sport được 79king mới đưa vào nhà cái, nhưng đây là sảnh chơi có giao diện hiện đại, tiện ích và thu hút nhiều người chơi. Sảnh cung cấp các giải đấu quốc tế và giải bóng đá lớn như: Premier League, La Liga, Champions League… Ngoài bóng đã UG Sport cũng cung cấp các game sport khác như bóng rổ, quần vợt, cầu lông . . . Với tỷ lệ cược cao và được thường xuyên cập nhật. Những trận đấu cũng được theo dõi qua phát live trực tiếp.</p>
+                <span class="text-xl font-semibold text-red-600">Sảnh CMD Sport</span>
+                <p>Đây là sảnh thể thao có các giải đấu như La Liga, Premier League, Serie A, Bundesliga, World Cup, Euro… và các môn sport khác</p>
+                <p>CMD Sport được 79king đánh giá cao trong các loại sảnh, chính bởi sảnh thu hút số đông người chơi tham gia. Chính bởi sự đa dạng các môn sport và những tỷ lệ kèo quyến rũ. Cũng như sảnh khác CMD cũng phát live trực tiếp các trận đấu để người chơi dễ dàng theo dõi.</p>
+                <span class="text-xl font-semibold text-red-600">Sảnh thể thao SBO Sport</span>
+                <p>SBO Sport là sảnh thể thao có giao diện đơn giản nhưng lại rất dễ dùng. Do đó đây là sảnh chơi được nhiều người ưa thích. Cũng như các sảnh còn lại, SBO Sport cung cấp đầy đủ các môn sport với tỷ lệ kèo hấp dẫn.</p>
+
+                <span class="text-2xl font-semibold text-red-600">Kết Luận</span>
+                <p>Thể thao 79king là game cá cược được nhiều người ưa thích và tham gia. Tại đây hội tụ nhiều bet thủ có chung đam mê. Qua bài viết trên đây chắc hẳn bạn đọc đã nắm rõ hơn về thông tin thể thao tại nhà cái 79king.</p>
+                    
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="sm:py-10 bg-gray-800 text-gray-100">
+        <div class="max-w-[1170px] m-auto p-5">
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-5 *:mt-8 sm:*:mt-0">
+                <!-- logo -->
+                <div class="">
+                    <a href="index.html" class="max-w-[250px]"><img src="./images/logo.png"></a>
+                    <p class="mt-5 text-[17px] text-balance"><a href="#" class="text-indigo-700 tracking-wide">79KING</a> là nhà cái giải trí chuyên nghiệp và gây ấn tượng mạnh ngay từ những buổi đầu có mặt trên thị trường. Điển hình nhất là việc 79KING cung cấp số lượng lớn game hấp dẫn, mức ăn thưởng cao. </p>
+                    <div class="flex gap-2 text-3xl mt-3 text-blue-500 *:cursor-pointer">
+                        <div><ion-icon class="hover:text-[#3a589d]" name="logo-facebook"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="logo-instagram"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="logo-twitter"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="mail"></ion-icon></div>
+                    </div>
+                    <div class="mt-3">
+                        <button onclick="url()" class="px-5 py-2 bg-[#ed1c24] hover:bg-red-700 text-lg tracking-wide flex justify-center items-center gap-2 border border-gray-100 rounded-lg"><img src="./images/web1s.png" class="w-12"><span>CONTINUE(x/x)</span></button>
+                    </div>
+                </div>
+                
+                <!-- VỀ CHÚNG TÔI -->
+                <div class="">
+                    <span class="text-lg">VỀ CHÚNG TÔI</span>
+                    <div class="mt-5 *:mt-4 *:cursor-pointer">
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Giới thiệu</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Miễn Trừ Trách Nhiệm</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Điều Khoản Sử Dụng</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">VChính Sách Bảo Mật</span></div>    
+                        <div onclick="url()" class="hover:text-gray-400"><ion-icon name="settings-outline"></ion-icon> <span class="">Quyền Riêng Tư</span></div>    
+                    </div>
+                    <div class="mt-5"><img src="./images/protect.png"></div>
+                </div>
+    
+                <!-- TỪ KHOÁ TÌM KIẾM -->
+                <div class="">
+                    <span class="text-lg">TỪ KHOÁ TÌM KIẾM</span>
+                    <div class="mt-5 *:mt-4 *:cursor-pointer">
+                        <div onclick="url()" class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <span class="">Hướng Dẫn</span></div>      
+                        <div onclick="url()" class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <span class="">Khuyến Mãi</span></div>      
+                        <div onclick="url()" class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <span class="">Tin Tức</span></div>      
+                        <div  class="flex gap-2 items-center hover:text-gray-400"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <a href="https://hay88net-sitemap.vercel.app/" class="">Sitemap</a></div>      
+                    </div>
+                </div>
+    
+                <!-- LIÊN HỆ -->
+                <div class="">
+                    <span class="text-lg">LIÊN HỆ</span>
+                    <div class="mt-5 *:mt-4">
+                        <div class="flex gap-2"><ion-icon class="text-5xl" name="location"></ion-icon> <span class="">Địa Chỉ: 101/8 Lê Văn Thọ, Phường 9, Gò Vấp, Thành phố Hồ Chí Minh, Vietnam</span></div>      
+                        <div class="flex gap-2 items-center"><ion-icon class="text-2xl" name="call"></ion-icon> <span class="">Hotline: 0979790790</span></div>      
+                        <div class="flex gap-2 items-center"><ion-icon class="text-2xl" name="mail"></ion-icon> <span class="">Email: 79kingskin@gmail.com</span></div>      
+                        <div class="flex gap-2 items-center"><ion-icon class="text-2xl" name="checkmark"></ion-icon> <a href="https://79king.skin/" class="">Website: https://79king.skin/</a></div>      
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 *:mt-10 w-full">
+                <div><img src="./images/footer-ban.png"></div>
+                <div class="w-full"><img src="./images/footer-ban2.png" class="w-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function OpenNav(){
+            document.getElementById("Nav").style.width = "100%";
+        }
+        function CloseNav(){
+            document.getElementById("Nav").style.width = "0%";
+        }
+
+         window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-128px";
+            }
+        }
+    </script>
+</body>
+</html>

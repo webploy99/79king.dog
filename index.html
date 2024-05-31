@@ -15,6 +15,7 @@
     <!-- Swiper slider -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
 </head>
 <body>
     <!--======== header ========-->
@@ -22,7 +23,7 @@
         <!-- header scroll dropdown -->
         <header id="navbar" class="header w-full fixed top-0 left-0 z-50 duration-500">
             <div class="bg-[#292e3b] px-3.5 z-40 shadow shadow-gray-600">
-                <div class="max-w-[1080px] m-auto flex  justify-center md:justify-between items-center text-white relative">
+                <div class="max-w-[1170px] m-auto flex  justify-center md:justify-between items-center text-white relative">
                     <!-- open nav -->
                     <div class="menu-icon absolute left-0 md:hidden text-2xl mt-1" onclick="OpenNav()">
                         <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
@@ -88,7 +89,7 @@
         <!-- header screen -->
         <header class="w-full z-50">
             <div class="bg-[#292e3b] px-3.5 z-40 shadow shadow-gray-600">
-                <div class="max-w-[1080px] m-auto flex  justify-center md:justify-between items-center text-white relative">
+                <div class="max-w-[1170px] m-auto flex  justify-center md:justify-between items-center text-white relative">
                     <!-- open nav -->
                     <div class="menu-icon absolute left-0 md:hidden text-2xl mt-1" onclick="OpenNav()">
                         <ion-icon name="menu-outline" class="border p-0.5 rounded-md"></ion-icon>
@@ -151,6 +152,8 @@
                 <button onclick="url()" class="btn1 btn--shockwave is-active bg-[#444444] w-26 py-2 rounded-lg border">ĐĂNG NHẬP</button>
             </div>
         </header>
+
+        
     </section>
 
     <!-- main -->
@@ -190,7 +193,7 @@
                         <div class="flex flex-col items-center gap-4">
                             <span class="text-3xl sm:text-2xl md:text-3xl">Bắn Cá</span>
                             <p class="text-center line-clamp-2">Trải nghiệm hỗn chiến thế giới đại dương với các siêu cá tại 79KING</p>
-                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                            <a href="banca.html"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></a>
                         </div>
                     </div>
                     
@@ -199,7 +202,7 @@
                         <div class="flex flex-col items-center gap-4">
                             <span class="text-3xl sm:text-2xl md:text-3xl">Thể Thao</span>
                             <p class="text-center line-clamp-2">Cùng tham gia sự kiện thể thao lớn nhất trên toàn thế giới tại 79KING</p>
-                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                            <a href="thethao.html"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></a>
                         </div>
                     </div>
 
@@ -208,7 +211,7 @@
                         <div class="flex flex-col items-center gap-4">
                             <span class="text-3xl sm:text-2xl md:text-3xl">Casino</span>
                             <p class="text-center line-clamp-2">Casino online 79KING uy tín, đẳng cấp quốc tế đang chờ đợi bạn</p>
-                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                            <a href="casino.html"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></a>
                         </div>
                     </div>
 
@@ -217,7 +220,7 @@
                         <div class="flex flex-col items-center gap-4">
                             <span class="text-3xl sm:text-2xl md:text-3xl">Lô Đề Online</span>
                             <p class="text-center line-clamp-2">Nơi giải trí tuyệt vời nhất để bạn thử vận may qua những con số</p>
-                            <div onclick="url()"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></div>
+                            <a href="xoso.html"><button class="py-2 px-5 rounded-lg bg-red-500 text-gray-50 hover:-translate-y-0.5 duration-300">CHƠI NGAY</button></a>
                         </div>
                     </div>
 
@@ -599,10 +602,10 @@
                     <a href="index.html" class="max-w-[250px]"><img src="./images/logo.png"></a>
                     <p class="mt-5 text-[17px] text-balance"><a href="#" class="text-indigo-700 tracking-wide">79KING</a> là nhà cái giải trí chuyên nghiệp và gây ấn tượng mạnh ngay từ những buổi đầu có mặt trên thị trường. Điển hình nhất là việc 79KING cung cấp số lượng lớn game hấp dẫn, mức ăn thưởng cao. </p>
                     <div class="flex gap-2 text-3xl mt-3 text-blue-500 *:cursor-pointer">
-                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="logo-facebook"></ion-icon></div>
-                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="logo-instagram"></ion-icon></div>
-                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="logo-twitter"></ion-icon></div>
-                        <div onclick="url()"><ion-icon class="hover:text-[#3a589d]" name="mail"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="logo-facebook"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="logo-instagram"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="logo-twitter"></ion-icon></div>
+                        <div><ion-icon class="hover:text-[#3a589d]" name="mail"></ion-icon></div>
                     </div>
                     <div class="mt-3">
                         <button onclick="url()" class="px-5 py-2 bg-[#ed1c24] hover:bg-red-700 text-lg tracking-wide flex justify-center items-center gap-2 border border-gray-100 rounded-lg"><img src="./images/web1s.png" class="w-12"><span>CONTINUE(x/x)</span></button>
@@ -657,3 +660,6 @@
     <script src="./script.js"></script>
 </body>
 </html>
+
+
+
